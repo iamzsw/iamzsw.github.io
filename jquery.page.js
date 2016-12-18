@@ -212,3 +212,88 @@
 	Page.init();
 	
 })(window);
+
+var plate=document.getElementById('plate');
+var needles=document.getElementById('needles');
+needles.setAttribute('style','position:absolute;top:8px;left:8px;');  //这里因为chrome里面，body的magin值为8px，所以我这里就没设为0了。
+var cntP=plate.getContext('2d');
+var cntH=needles.getContext('2d');
+plate.width=10;
+plate.height=10;
+needles.width=500;
+needles.height=400;
+
+function drawclock(cnt,radius,platelen,linewidth,numLen,NUMLEN){
+            this.cnt=cnt;
+            this.radius=radius;
+            this.platelen=platelen;
+            this.linewidth=linewidth;
+            this.numLen=numLen;
+            this.NUMLEN=NUMLEN;
+            this.getCalibCoor=function(i){  
+                //获得表盘刻度两端的坐标
+               
+            };
+            this.drawCalibration=function(){ //画刻度
+               
+            };
+        }
+　　　　　　
+			
+			
+	function clockNeedle(cnt,R,lineWidth,strokeStyle,lineCap,obj){
+            this.R=R;
+            this.cnt=cnt;
+            this.lineWidth=lineWidth;
+            this.strokeStyle=strokeStyle;
+            this.lineCap=lineCap;
+            this.obj=obj;
+            this.getNeedleCoor=function(i){
+                var X=200+this.R*0.8*Math.sin(i); //起点的坐标
+                var Y=200-this.R*0.8*Math.cos(i);
+
+                var x=200-20*Math.sin(i); //终点的坐标
+                var y=200+20*Math.cos(i);
+                return {X:X,Y:Y,x:x,y:y};
+            };
+            this.drawNeedle=function(){
+                var d=new Date().getTime();
+                var angle;
+                switch(this.obj){
+                    case 0:
+                    angle=(d/3600000%24+8)/12*360*Math.PI/180;
+                    break;
+                    case 1:
+                    angle=d/60000%60/60*360*Math.PI/180;
+                    break;
+                    case 2:
+                    angle=d/1000%60/60*360*Math.PI/180;
+                    break;
+                }
+                var coorobj=this.getNeedleCoor(angle);
+                this.cnt.beginPath();
+                this.cnt.moveTo(coorobj.x,coorobj.y);
+                this.cnt.lineTo(coorobj.X,coorobj.Y);
+                // this.cnt.closePath();
+
+                this.cnt.lineWidth=this.lineWidth;
+                this.cnt.strokeStyle=this.strokeStyle;
+                this.cnt.lineCap=this.lineCap;
+                this.cnt.stroke();
+            }
+        }
+		
+		function draw(){
+            cntH.clearRect(0,0,needles.width,needles.height);
+            var mzneedle=new clockNeedle(cntH,200,1,'rgba(0,0,0,.5)','round',2);
+            //最后一个参数0代表画时针，1画分针，2画秒针
+            var fzneedle=new clockNeedle(cntH,80,3,'rgba(0,0,0,.4)','round',0);
+            var szneedle=new clockNeedle(cntH,140,2,'rgba(0,0,0,.3)','round',1);
+            mzneedle.drawNeedle();
+            fzneedle.drawNeedle();
+            szneedle.drawNeedle();
+            cntH.arc(200,200,5,0,2*Math.PI);
+            cntH.fillStyle='rgba(0,0,0,.5)';
+            cntH.fill();
+ }
+ setInterval(draw,1);

@@ -7,6 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.custom.css" />
         <link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="head.min.js"></script>
+        <script src="mootools-1.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="image-hover.css" type="text/css">
+		<script src="browserCheck.js" type="text/javascript"></script>
 		<noscript>
 			<style>
 				@media screen and (max-width: 715px) {
@@ -26,11 +29,11 @@
 					<span class="hs-author">by ZhouShiWei</span>
 				</div>
 				<nav>
-					<a href="#introduction"><span>个人信息</span></a>
-					<a href="#chapter1"><span>Chapter I.</span><span>第一阶段</span></a>
-					<a href="#chapter2"><span>Chapter II.</span><span>第二阶段</span></a>
-					<a href="#chapter3"><span>Chapter III.</span><span>第三阶段</span></a>
-					<a href="#chapter4"><span>Chapter IV.</span><span>帅照</span></a>
+					<a href="#introduction"><span>Personal Info.</span><span>个人信息</span></a>
+					<a href="#chapter1"><span>Part I.</span><span>第一阶段</span></a>
+					<a href="#chapter2"><span>Part II.</span><span>第二阶段</span></a>
+					<a href="#chapter3"><span>Part III.</span><span>第三阶段</span></a>
+					<a href="#chapter4"><span>Part IV.</span><span>生活照</span></a>
 					<a href="#chapter5"><span>Chapter V.</span><span>.....</span></a>
 					<a href="#chapter6"><span>Chapter VI.</span><span>......</span></a>
 					<a href="#chapter7"><span>Chapter VII.</span><span>......</span></a>
@@ -42,58 +45,146 @@
 				<div class="hs-content-wrapper">
 					<article class="hs-content" id="introduction">
 						<div class="hs-inner">
-							<h2>个人信息</h2>
-
-							<p>My name is ZhouShiWei.....</p>
-
-							<h3>籍贯：福建三明</h3>
-                            <h3>邮箱：47116396@qq.com</h3>
-                            <h3>手机： 180********</h3>
-							
+							<a href="#introduction"><h2>个人信息</h2></a>
+							<p>Information</p>
+		
+                            <table>
+                            	<tr>
+                                <th>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</th><td>周士炜</td>
+                                </tr>
+                                <tr>
+                                <th>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</th><td>Boy</td>
+                                </tr>
+                                 <tr>
+                                <th>出生日期：</th><td>1993.11</td>
+                                </tr>
+                                <tr>
+                                <th>籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：</th><td>福建三明</td>
+                                </tr>
+                                <tr>
+                                <th>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</th><td>47116396@qq.com</td>
+                                </tr>
+                                <tr>
+                                <th>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</th><td>18060******</td>
+                                </tr>
+                                 <tr>
+                                <th>毕业院校：</th><td>福建工程学院</td>
+                                </tr>
+                                 <tr>
+                                <th>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</th><td>通信工程</td>
+                                </tr>
+                            </table>
+                            <canvas id="plate">
+       							 画表盘
+							</canvas>
+							<canvas id="needles">
+       							 画时针
+							</canvas>
 						</div>
 					</article>
 					<article class="hs-content" id="chapter1">
 						<div class="hs-inner">
-							<h2>第一阶段</h2>
-							<h3>Variation Under Domestication</h3>
-							
-							<h4>Causes of Variability</h4>
-							<p>当我刚来到传一时……</p>
-							
-							<h4>Effects of Habit and the use and disuse of Parts</h4>
-							<p>Changed habits produce an inherited effect as in the period of the flowering of plants when transported from one climate to another. With animals the increased use or disuse of parts has had a more marked influence; thus I find in the domestic duck that the bones of the wing weigh less and the bones of the leg more, in proportion to the whole skeleton, than do the same bones in the wild duck; and this change may be safely attributed to the domestic duck flying much less, and walking more, than its wild parents. The great and inherited development of the udders in cows and goats in countries where they are habitually milked, in comparison with these organs in other countries, is probably another instance of the effects of use. Not one of our domestic animals can be named which has not in some country drooping ears; and the view which has been suggested that the drooping is due to disuse of the muscles of the ear, from the animals being seldom much alarmed, seems probable...</p>
-							<h4>Correlated Variation</h4>
-							<p>When we look to the hereditary varieties or races of our domestic animals and plants, and compare them with closely allied species, we generally perceive in each domestic race, as already remarked, less uniformity of character than in true species. Domestic races often have a somewhat monstrous character; by which I mean, that, although differing from each other and from other species of the same genus, in several trifling respects, they often differ in an extreme degree in some one part, both when compared one with another, and more especially when compared with the species under nature to which they are nearest allied. With these exceptions (and with that of the perfect fertility of varieties when crossed—a subject hereafter to be discussed), domestic races of the same species differ from each other in the same manner as do the closely allied species of the same genus in a state of nature, but the differences in most cases are less in degree. This must be admitted as true, for the domestic races of many animals and plants have been ranked by some competent judges as the descendants of aboriginally distinct species, and by other competent judges as mere varieties. If any well marked distinction existed between a domestic race and a species, this source of doubt would not so perpetually recur. It has often been stated that domestic races do not differ from each other in characters of generic value. It can be shown that this statement is not correct; but naturalists differ much in determining what characters are of generic value; all such valuations being at present empirical. When it is explained how genera originate under nature, it will be seen that we have no right to expect often to find a generic amount of difference in our domesticated races...</p>
+							<a href="#chapter1"><h2>第一阶段项目展示</h2></a>						                       
+							<h3>扫雷</h3>
+                            <div id="image-container">
+							<div class="img" id="img-5">
+								<div class="mask"></div>
+								<img src="3.png">
+							</div>	
+                            </div>
+							<p>运用Swing,待完善……</p>
+                            </br></br></br></br></br></br>
+							<h3>俄罗斯方块</h3>
+                            
+                            <div id="image-container">
+								<div class="img" id="img-4">
+									<div class="mask"></div>
+									<img src="1.png">
+								</div>	
+                            	<div class="img" id="img-2">
+									<div class="mask"></div>
+									<img src="2.png">
+								</div>	
+							</div>                           
+                            
+							<p>介绍,待完善……</p>
 						</div>
 					</article>
 					<article class="hs-content" id="chapter2">
 						<div class="hs-inner">
-							<h2>Chapter II.</h2>
-							<h3>Variation Under Nature</h3>
-							
-							<h4>Variability</h4>
-							<p>Before applying the principles arrived at in the last chapter to organic beings in a state of nature, we must briefly discuss whether these latter are subject to any variation. To treat this subject properly, a long catalogue of dry facts ought to be given; but these I shall reserve for a future work. Nor shall I here discuss the various definitions which have been given of the term species. No one definition has satisfied all naturalists; yet every naturalist knows vaguely what he means when he speaks of a species. Generally the term includes the unknown element of a distinct act of creation. The term "variety" is almost equally difficult to define; but here community of descent is almost universally implied, though it can rarely be proved. We have also what are called monstrosities; but they graduate into varieties. By a monstrosity I presume is meant some considerable deviation of structure, generally injurious, or not useful to the species. Some authors use the term "variation" in a technical sense, as implying a modification directly due to the physical conditions of life; and "variations" in this sense are supposed not to be inherited; but who can say that the dwarfed condition of shells in the brackish waters of the Baltic, or dwarfed plants on Alpine summits, or the thicker fur of an animal from far northwards, would not in some cases be inherited for at least a few generations? And in this case I presume that the form would be called a variety.</p>
-
-							<p>It may be doubted whether sudden and considerable deviations of structure, such as we occasionally see in our domestic productions, more especially with plants, are ever permanently propagated in a state of nature. Almost every part of every organic being is so beautifully related to its complex conditions of life that it seems as improbable that any part should have been suddenly produced perfect, as that a complex machine should have been invented by man in a perfect state. Under domestication monstrosities sometimes occur which resemble normal structures in widely different animals. Thus pigs have occasionally been born with a sort of proboscis, and if any wild species of the same genus had naturally possessed a proboscis, it might have been argued that this had appeared as a monstrosity; but I have as yet failed to find, after diligent search, cases of monstrosities resembling normal structures in nearly allied forms, and these alone bear on the question. If monstrous forms of this kind ever do appear in a state of nature and are capable of reproduction (which is not always the case), as they occur rarely and singly, their preservation would depend on unusually favourable circumstances. They would, also, during the first and succeeding generations cross with the ordinary form, and thus their abnormal character would almost inevitably be lost. But I shall have to return in a future chapter to the preservation and perpetuation of single or occasional variations...</p>
+							<a href="#chapter2"><h2>第二阶段项目展示</h2></a>
+                            <h3>QQ</h3>
+                            </br></br></br>
+                            <div id="image-container">
+							<div class="img" id="img-3">
+								<div class="mask" id="mask-1"></div>
+								<div class="mask" id="mask-2"></div>
+								<img src="4.png">
+							</div>	
+                            <div class="img" id="img-5">
+								<div class="mask"></div>
+								<img src="5.png">
+							</div>	
+                            </div>
+							<p>介绍,待完善……</p>
+                            </br></br></br></br></br></br>
+							<h3>音乐播放器</h3>
+                            
+                            <div id="image-container">
+								<div class="img" id="img-1">
+									<div class="mask"></div>
+									<img src="6.png">
+								</div>	
+                            	<div class="img" id="img-5">
+									<div class="mask"></div>
+									<img src="7.png">
+								</div>	
+							</div>                           
+                            
+							<p>介绍,待完善……</p>
+	
 						</div>
 					</article>
 					<article class="hs-content" id="chapter3">
 						<div class="hs-inner">
-							<h2>Chapter III.</h2>
-							<h3>Struggle for Existence</h3>
-							<h4>Its bearing on natural selection</h4>
-							<p>Before entering on the subject of this chapter I must make a few preliminary remarks to show how the struggle for existence bears on natural selection. It has been seen in the last chapter that among organic beings in a state of nature there is some individual variability: indeed I am not aware that this has ever been disputed. It is immaterial for us whether a multitude of doubtful forms be called species or sub-species or varieties; what rank, for instance, the two or three hundred doubtful forms of British plants are entitled to hold, if the existence of any well-marked varieties be admitted. But the mere existence of individual variability and of some few well-marked varieties, though necessary as the foundation for the work, helps us but little in understanding how species arise in nature. How have all those exquisite adaptations of one part of the organisation to another part, and to the conditions of life and of one organic being to another being, been perfected? We see these beautiful co-adaptations most plainly in the woodpecker and the mistletoe; and only a little less plainly in the humblest parasite which clings to the hairs of a quadruped or feathers of a bird; in the structure of the beetle which dives through the water; in the plumed seed which is wafted by the gentlest breeze; in short, we see beautiful adaptations everywhere and in every part of the organic world.</p>
-
-							<p>Again, it may be asked, how is it that varieties, which I have called incipient species, become ultimately converted into good and distinct species, which in most cases obviously differ from each other far more than do the varieties of the same species? How do those groups of species, which constitute what are called distinct genera and which differ from each other more than do the species of the same genus, arise? All these results, as we shall more fully see in the next chapter, follow from the struggle for life. Owing to this struggle, variations, however slight and from whatever cause proceeding, if they be in any degree profitable to the individuals of a species, in their infinitely complex relations to other organic beings and to their physical conditions of life, will tend to the preservation of such individuals, and will generally be inherited by the offspring. The offspring, also, will thus have a better chance of surviving, for, of the many individuals of any species which are periodically born, but a small number can survive. I have called this principle, by which each slight variation, if useful, is preserved, by the term natural selection, in order to mark its relation to man's power of selection. But the expression often used by Mr. Herbert Spencer, of the Survival of the Fittest, is more accurate, and is sometimes equally convenient. We have seen that man by selection can certainly produce great results, and can adapt organic beings to his own uses, through the accumulation of slight but useful variations, given to him by the hand of Nature. But Natural Selection, we shall hereafter see, is a power incessantly ready for action, and is as immeasurably superior to man's feeble efforts, as the works of Nature are to those of Art.</p>
-
-							<p>We will now discuss in a little more detail the struggle for existence. In my future work this subject will be treated, as it well deserves, at greater length. The elder De Candolle and Lyell have largely and philosophically shown that all organic beings are exposed to severe competition. In regard to plants, no one has treated this subject with more spirit and ability than W. Herbert, Dean of Manchester, evidently the result of his great horticultural knowledge. Nothing is easier than to admit in words the truth of the universal struggle for life, or more difficult--at least I found it so--than constantly to bear this conclusion in mind. Yet unless it be thoroughly engrained in the mind, the whole economy of nature, with every fact on distribution, rarity, abundance, extinction, and variation, will be dimly seen or quite misunderstood. We behold the face of nature bright with gladness, we often see superabundance of food; we do not see or we forget that the birds which are idly singing round us mostly live on insects or seeds, and are thus constantly destroying life; or we forget how largely these songsters, or their eggs, or their nestlings, are destroyed by birds and beasts of prey; we do not always bear in mind, that, though food may be now superabundant, it is not so at all seasons of each recurring year...</p>
+							<a href="#chapter3"><h2>第三阶段项目展示</h2></a>
+							<h3>OSTA考试系统</h3>
+                            
+                            <div id="image-container">
+								<div class="img" id="img-1">
+									<div class="mask"></div>
+									<img src="8.png">
+								</div>	
+                            	<div class="img" id="img-2">
+									<div class="mask"></div>
+									<img src="9.png">
+								</div>	
+                                <div class="img" id="img-4">
+									<div class="mask"></div>
+									<img src="10.png">
+								</div>	
+                                <div class="img" id="img-5">
+									<div class="mask"></div>
+									<img src="11.png">
+								</div>	
+                                <div class="img" id="img-6">
+									<div class="mask"></div>
+									<img src="12.png">
+								</div>	
+							</div>
+                            
+                            
+							<p>介绍,待完善……</p>
 						</div>
 					</article>
 					<article class="hs-content" id="chapter4">
 						<div class="hs-inner">
-							<h2>Chapter IV.</h2>
-							 <IMG src="zsw.jpg" border=0 name=va width="350px">
+							<a href="#chapter4"><h2>生活照</h2></a>
+                            </br>
+                             <label>照骗：</label>
+							 <IMG src="cat2.png" border=0 name=va width="350px">
 						</div>
+                      
 					</article>
 				</div><!-- hs-content-wrapper -->
 			</div><!-- hs-content-scroller -->
@@ -110,6 +201,7 @@
 				{ smartresize : "jquery.smartresize.js" },
 				{ page : "jquery.page.js" }
 			);
+			
 		</script>
     </body>
 </html>

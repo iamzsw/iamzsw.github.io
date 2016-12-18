@@ -1,14 +1,41 @@
 @import url('normalize.css');
-
 body{
 	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
-	background: #e9f0f5 url(../images/pattern.png) repeat top left;
+	background: #e9f0f5 url(pattern.png) repeat top left;
 	font-weight: 400;
 	font-size: 12px;
 	color: #333;
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
+
+table {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+th {
+	background:#b5cfd2 url(cell-blue.jpg);
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+	width:130px;
+	font-size: 15px;
+}
+td {
+	background:#dcddc0 url(cell-grey.jpg);
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+	width:130px;
+	font-size: 15px;
+}
+
 h1, h3, h4{
 	font-weight: 400;
 }
@@ -34,6 +61,8 @@ h3{
 	font-size: 26px;
 	color: #585959;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.4);
+	border-bottom: 2px solid rgba(126, 126, 126, 0.2);
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
 }
 h4{
 	text-transform: uppercase;
@@ -49,6 +78,9 @@ a{
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+.123{
+	color: #308fd;
 }
 a:hover{
 	color: #87b6da;
@@ -95,8 +127,9 @@ a:hover{
 }
 .hs-menu nav a span:nth-child(2){
 	display: block;
-	color: #fff;
+	color: #66ccff;
 	font-style: italic;
+	font-size: 16px;
 	font-weight: 400;
 	text-transform: none;
 	padding-top: 3px;
@@ -115,7 +148,7 @@ a:hover{
 	overflow: hidden;
 }
 .hs-content{
-	width: 500px;
+	width: 600px;
 	overflow-y: scroll;
 	height: 100%;
 	float: left;
